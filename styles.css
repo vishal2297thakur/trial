@@ -1,0 +1,98 @@
+# Vishal Thakur — Personal Website
+
+A clean, single-page personal site for a research scholar / founder. Plain HTML, CSS,
+and JavaScript — no build step, no frameworks. Drop it in a GitHub repo and it works.
+
+```
+vishal-thakur-site/
+├── index.html          ← all the page content lives here (edit your text here)
+├── css/
+│   └── styles.css       ← all the colors & styling (change the accent color here)
+├── js/
+│   └── main.js          ← dark-mode toggle + scroll animation (no need to touch)
+├── images/
+│   └── README.md        ← put your photo here as portrait.jpg
+└── README.md            ← this file
+```
+
+---
+
+## How to edit your content
+
+**Everything you'll want to change is in `index.html`.** Each section is wrapped in a
+big comment banner that tells you what it is and what to edit, e.g.:
+
+```html
+<!-- ====================================================================
+     02 · SELECTED WORK   ·   EDIT each .work-item (number, title, tag, …)
+     ==================================================================== -->
+```
+
+Just open `index.html` in any text editor and type over the existing words.
+
+| Section | What to edit |
+|---|---|
+| **Nav** | Your name, and the menu links |
+| **Hero** | Headline, intro sentence, the two buttons |
+| **Strip** | Short keywords describing your work |
+| **01 · About** | Lead sentence, two paragraphs, the three pills |
+| **02 · Selected Work** | Each item's number, title, tag, description, and link (`href`) |
+| **03 · Research** | Intro line + the three research cards |
+| **04 · Capabilities** | The three skill groups and their chips |
+| **05 · Journey** | Each timeline entry (year, role, organisation, detail) |
+| **06 · Writing** | Each post (category, date, title, excerpt, link) |
+| **07 · Contact** | Your email and each social link's URL |
+
+**To add another item** (e.g. one more project or post), copy one of the existing
+blocks in that section and paste it right below, then edit the copy.
+
+---
+
+## Your photo
+
+Save your portrait as **`images/portrait.jpg`**. See `images/README.md` for details.
+Until you add it, a tidy striped placeholder shows in its place.
+
+---
+
+## Changing the accent color
+
+Open `css/styles.css` — the very top has:
+
+```css
+--accent:      #bb5a35;                 /* the highlight color */
+--accent-soft: rgba(187, 90, 53, 0.10); /* faint version for hovers */
+```
+
+Swap in one of the suggested palettes listed in that file (Terracotta, Forest, Ink,
+Plum) or any color you like. That's the only place you need to change it.
+
+The light / dark toggle (moon / sun button, top-right) works automatically and
+remembers the visitor's choice.
+
+---
+
+## Publishing on GitHub Pages
+
+1. Create a new repository on GitHub.
+   - For a site at **`https://<your-username>.github.io`**, name the repo exactly
+     `<your-username>.github.io`.
+   - Otherwise any repo name works (you'll get `https://<username>.github.io/<repo>/`).
+2. Upload the **contents** of this `vishal-thakur-site` folder to the repo
+   (so `index.html` sits at the top level of the repo, not inside a sub-folder).
+   - Easiest way: on the repo page click **Add file → Upload files**, drag everything
+     in, and **Commit**.
+3. Go to **Settings → Pages**.
+4. Under **Build and deployment → Source**, choose **Deploy from a branch**, pick the
+   `main` branch and the `/ (root)` folder, then **Save**.
+5. Wait ~1 minute, refresh, and your live URL appears at the top of that Pages screen.
+
+To update the site later, just edit the files in the repo and commit — Pages
+re-deploys automatically.
+
+---
+
+## Previewing locally
+
+Double-click `index.html` to open it in your browser. Everything works offline except
+the Google Fonts (which need an internet connection to look exactly right).
