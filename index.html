@@ -1,268 +1,308 @@
-/* ============================================================
-   Vishal Thakur — personal site styles
-   ------------------------------------------------------------
-   THEME COLORS: change the accent in ONE place below
-   (--accent / --accent-soft). Light & dark themes are handled
-   automatically. You normally don't need to touch anything else.
-   ============================================================ */
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vishal Thakur</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,wght@0,400;0,500;1,400&family=Public+Sans:wght@400;500&display=swap" rel="stylesheet" />
+     <link rel="stylesheet" href="css/styles.css" />
+   </head>
+<body>
 
-:root {
-  --bg:        #f6f2ea;
-  --bg2:       #efe8da;
-  --ink:       #1d1a15;
-  --muted:     #736b5c;
-  --line:      rgba(29, 26, 21, 0.13);
-  --card:      #fffdf7;
+   <!-- NAV -->
+   <nav class="nav">
+        <a class="nav__brand" href="#">
+               <span class="nav__mark">VT</span>
+               <span class="nav__name">Vishal Thakur</span>
+        </a>
+        <div class="nav__links">
+               <a class="nav__link" href="#about">About</a>
+               <a class="nav__link" href="#work">Work</a>
+               <a class="nav__link" href="#research">Research</a>
+               <a class="nav__link" href="#skills">Skills</a>
+               <a class="nav__link" href="#journey">Journey</a>
+               <a class="nav__link" href="#writing">Writing</a>
+               <a class="nav__link" href="#contact">Contact</a>
+               <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">&#9790;</button>
+        </div>
+   </nav>
 
-  /* >>> ACCENT COLOR — edit these two lines to recolor the site <<<
-     Some nice options:
-       Terracotta : #bb5a35  /  rgba(187,90,53,0.10)
-       Forest     : #3f7d52  /  rgba(63,125,82,0.10)
-       Ink (blue) : #3b5bbf  /  rgba(59,91,191,0.10)
-       Plum       : #8a4a86  /  rgba(138,74,134,0.10)  */
-  --accent:      #bb5a35;
-  --accent-soft: rgba(187, 90, 53, 0.10);
-}
+   <!-- HERO -->
+   <section class="hero">
+        <div class="hero__content">
+               <div class="hero__kicker">
+                        <span class="eyebrow">Research Scholar &amp; Founder</span>
+                        <span class="dot"></span>
+               </div>
+               <h1 class="hero__title">
+                        Building things that<br /><em class="accent">matter.</em>
+               </h1>
+               <p class="hero__lead">
+                        I work at the intersection of technology, research, and entrepreneurship —
+                        turning hard problems into elegant solutions.
+               </p>
+               <div class="btn-row">
+                        <a class="btn btn--solid" href="#work">See my work</a>
+                        <a class="btn btn--ghost" href="#contact">Get in touch</a>
+               </div>
+        </div>
+        <div class="portrait-wrap">
+               <div class="portrait">
+                        <div class="portrait__frame"></div>
+                        <img class="portrait__img" src="images/portrait.jpg" alt="Vishal Thakur"
+                                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                        <div class="portrait__placeholder">Add images/portrait.jpg</div>
+               </div>
+        </div>
+   </section>
 
-[data-theme="dark"] {
-  --bg:    #15130e;
-  --bg2:   #1d1a13;
-  --ink:   #f1ece1;
-  --muted: #a69c8a;
-  --line:  rgba(241, 236, 225, 0.14);
-  --card:  #1b1810;
-}
+   <!-- STRIP -->
+   <div class="strip reveal">
+        <span>Research</span><span class="slash">/</span>
+     <span>Product</span><span class="slash">/</span>
+     <span>Engineering</span><span class="slash">/</span>
+     <span>Strategy</span><span class="slash">/</span>
+     <span>Design</span>
+   </div>
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+<!-- ABOUT -->
+<section id="about" class="reveal">
+  <div class="section-head">
+      <span class="eyebrow eyebrow--muted">01</span>
+      <h2 class="section-title">About</h2>
+  </div>
+  <div class="about">
+      <div>
+               <p class="about__lead">
+                          I am a researcher, builder, and thinker passionate about creating impact
+                          through technology.
+               </p>
+               <div class="about__cols">
+                          <p>
+                                       My work spans across academic research and real-world product building.
+                                       I enjoy tackling ambiguous problems and finding clarity through first principles.
+                          </p>
+                          <p>
+                                       When I am not building, I write about ideas that interest me — from emerging
+                                       technology to philosophy of mind and systems thinking.
+                          </p>
+               </div>
+               <div class="pills">
+                          <span class="pill">Research</span>
+                          <span class="pill">Product Design</span>
+                          <span class="pill">Systems Thinking</span>
+               </div>
+      </div>
+  </div>
+</section>
 
-body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: 'Public Sans', system-ui, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-  transition: background .5s ease, color .5s ease;
-}
+   <!-- WORK -->
+   <section id="work" class="alt-bg reveal">
+        <div class="section-head">
+               <span class="eyebrow eyebrow--muted">02</span>
+               <h2 class="section-title">Selected Work</h2>
+        </div>
+        <div class="work-head">
+               <span></span>
+            <span class="note">Click any project to learn more</span>
+        </div>
+     <a class="work-item" href="#">
+         <span class="work-item__num">01</span>
+         <div>
+               <div class="work-item__top">
+                       <span class="work-item__title">Project Alpha</span>
+                       <span class="tag">Research</span>
+               </div>
+               <p class="work-item__desc">A deep-dive research initiative exploring novel approaches to complex systems.</p>
+         </div>
+         <span class="arrow">&#8599;</span>
+     </a>
+     <a class="work-item" href="#">
+         <span class="work-item__num">02</span>
+         <div>
+               <div class="work-item__top">
+                       <span class="work-item__title">Product Beta</span>
+                       <span class="tag">Product</span>
+               </div>
+               <p class="work-item__desc">An end-to-end product built to solve real-world inefficiencies in a niche domain.</p>
+         </div>
+         <span class="arrow">&#8599;</span>
+     </a>
+     <a class="work-item" href="#">
+         <span class="work-item__num">03</span>
+         <div>
+               <div class="work-item__top">
+                       <span class="work-item__title">Tool Gamma</span>
+                       <span class="tag">Engineering</span>
+               </div>
+               <p class="work-item__desc">An open-source developer tool with hundreds of active users and contributors.</p>
+         </div>
+         <span class="arrow">&#8599;</span>
+     </a>
+   </section>
 
-::selection { background: var(--accent); color: #fff; }
+<!-- RESEARCH -->
+<section id="research" class="reveal">
+  <div class="section-head">
+      <span class="eyebrow eyebrow--muted">03</span>
+      <h2 class="section-title">Research</h2>
+  </div>
+  <div class="research-intro">
+      <p>My research focuses on understanding complex systems and building tools to navigate them effectively.</p>
+  </div>
+  <div class="card-grid">
+      <div class="r-card">
+            <h3>Complexity &amp; Emergence</h3>
+            <p>Studying how simple rules give rise to complex, adaptive behavior in both natural and artificial systems.</p>
+      </div>
+      <div class="r-card">
+            <h3>Human-Computer Interaction</h3>
+            <p>Designing interfaces that reduce cognitive load and augment human decision-making.</p>
+      </div>
+      <div class="r-card">
+            <h3>Knowledge Systems</h3>
+            <p>Exploring how knowledge is structured, shared, and evolved in distributed communities.</p>
+      </div>
+  </div>
+</section>
 
-a { color: inherit; }
+<!-- SKILLS -->
+<section id="skills" class="alt-bg reveal">
+  <div class="section-head">
+      <span class="eyebrow eyebrow--muted">04</span>
+      <h2 class="section-title">Capabilities</h2>
+  </div>
+  <div class="skills-grid">
+      <div class="skill-group">
+            <h4>Engineering</h4>
+            <div class="chips">
+                    <span class="chip">Python</span>
+                    <span class="chip">JavaScript</span>
+                    <span class="chip">TypeScript</span>
+                    <span class="chip">React</span>
+                    <span class="chip">Node.js</span>
+            </div>
+      </div>
+      <div class="skill-group">
+            <h4>Research</h4>
+            <div class="chips">
+                    <span class="chip">Machine Learning</span>
+                    <span class="chip">Data Analysis</span>
+                    <span class="chip">Academic Writing</span>
+                    <span class="chip">Qualitative Methods</span>
+            </div>
+      </div>
+      <div class="skill-group">
+            <h4>Product</h4>
+            <div class="chips">
+                    <span class="chip">Strategy</span>
+                    <span class="chip">UX Design</span>
+                    <span class="chip">Figma</span>
+                    <span class="chip">Growth</span>
+            </div>
+      </div>
+  </div>
+</section>
 
-.wrap { padding-left: 7vw; padding-right: 7vw; }
+<!-- JOURNEY / TIMELINE -->
+<section id="journey" class="reveal">
+  <div class="section-head">
+      <span class="eyebrow eyebrow--muted">05</span>
+      <h2 class="section-title">Journey</h2>
+  </div>
+  <div class="timeline">
+      <div class="tl-item">
+            <span class="tl-year">2024 &ndash;</span>
+            <div>
+                    <p class="tl-role">Founder</p>
+                    <p class="tl-org">Independent Venture</p>
+                    <p class="tl-detail">Building a product at the intersection of research and technology.</p>
+            </div>
+      </div>
+      <div class="tl-item">
+            <span class="tl-year">2022 &ndash; 24</span>
+            <div>
+                    <p class="tl-role">Research Scholar</p>
+                    <p class="tl-org">University</p>
+                    <p class="tl-detail">Conducted research on complex systems and published findings in peer-reviewed venues.</p>
+            </div>
+      </div>
+      <div class="tl-item">
+            <span class="tl-year">2020 &ndash; 22</span>
+            <div>
+                    <p class="tl-role">Software Engineer</p>
+                    <p class="tl-org">Tech Company</p>
+                    <p class="tl-detail">Built scalable systems serving thousands of users daily.</p>
+            </div>
+      </div>
+  </div>
+</section>
 
-/* Reveal-on-scroll (progressive enhancement, content always visible) */
-.reveal { will-change: transform; }
+<!-- WRITING -->
+<section id="writing" class="alt-bg reveal">
+  <div class="section-head">
+      <span class="eyebrow eyebrow--muted">06</span>
+      <h2 class="section-title">Writing</h2>
+  </div>
+  <div class="posts">
+      <a class="post" href="#">
+            <div class="post__meta">
+                    <span>Essay</span>
+                    <span>Jan 2025</span>
+            </div>
+            <p class="post__title">On Building in Public</p>
+            <p class="post__excerpt">Thoughts on transparency, accountability, and the unexpected benefits of sharing work in progress.</p>
+            <span class="post__more">Read more &rarr;</span>
+      </a>
+      <a class="post" href="#">
+            <div class="post__meta">
+                    <span>Research</span>
+                    <span>Nov 2024</span>
+            </div>
+            <p class="post__title">The Quiet Power of Systems Thinking</p>
+            <p class="post__excerpt">How a simple mental model can transform how you approach complex, ambiguous problems.</p>
+            <span class="post__more">Read more &rarr;</span>
+      </a>
+      <a class="post" href="#">
+            <div class="post__meta">
+                    <span>Product</span>
+                    <span>Sep 2024</span>
+            </div>
+            <p class="post__title">Design for Clarity, Not Cleverness</p>
+            <p class="post__excerpt">The best interfaces disappear. A meditation on restraint in product design.</p>
+            <span class="post__more">Read more &rarr;</span>
+      </a>
+  </div>
+</section>
 
-/* ---------- NAV ---------- */
-.nav {
-  position: sticky; top: 0; z-index: 50;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 18px 7vw;
-  backdrop-filter: saturate(1.4) blur(14px);
-  background: color-mix(in srgb, var(--bg) 80%, transparent);
-  border-bottom: 1px solid var(--line);
-}
-.nav__brand { display: flex; align-items: center; gap: 11px; text-decoration: none; color: var(--ink); }
-.nav__mark {
-  width: 30px; height: 30px; border-radius: 50%; background: var(--accent);
-  display: inline-flex; align-items: center; justify-content: center;
-  color: #fff; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500;
-}
-.nav__name { font-family: 'Newsreader', serif; font-size: 19px; font-weight: 500; letter-spacing: .2px; }
-.nav__links { display: flex; align-items: center; gap: 28px; }
-.nav__link { text-decoration: none; color: var(--muted); font-size: 14px; letter-spacing: .2px; transition: color .2s ease; }
-.nav__link:hover { color: var(--ink); }
-.theme-toggle {
-  cursor: pointer; width: 38px; height: 38px; border-radius: 50%;
-  border: 1px solid var(--line); background: var(--card); color: var(--ink);
-  font-size: 15px; display: inline-flex; align-items: center; justify-content: center;
-  transition: transform .2s ease;
-}
-.theme-toggle:hover { transform: rotate(20deg); }
+<!-- CONTACT -->
+<section id="contact" class="contact reveal">
+  <div class="contact__grid">
+      <div>
+            <span class="eyebrow eyebrow--muted">07</span>
+            <h2 class="contact__title">Let&rsquo;s build something together.</h2>
+            <a class="contact__email" href="mailto:vishal@example.com">vishal@example.com</a>
+      </div>
+      <div class="links">
+            <a class="link-row" href="https://github.com/vishal2297thakur" target="_blank" rel="noopener">
+                    GitHub <span class="ext">&#8599;</span>
+            </a>
+            <a class="link-row" href="#" target="_blank" rel="noopener">
+                    LinkedIn <span class="ext">&#8599;</span>
+            </a>
+            <a class="link-row" href="#" target="_blank" rel="noopener">
+                    Twitter / X <span class="ext">&#8599;</span>
+            </a>
+      </div>
+  </div>
+  <div class="colophon">
+      <span>Vishal Thakur &mdash; 2025</span>
+      <span>Built with plain HTML &amp; CSS</span>
+  </div>
+</section>
 
-/* ---------- HERO ---------- */
-.hero {
-  padding: 9vh 7vw 8vh;
-  display: grid; grid-template-columns: 1.35fr .85fr; gap: 6vw; align-items: center;
-}
-.eyebrow {
-  font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 1.5px;
-  text-transform: uppercase; color: var(--accent);
-}
-.eyebrow--muted { color: var(--muted); }
-.hero__kicker { display: flex; align-items: center; gap: 12px; margin-bottom: 26px; }
-.dot { width: 5px; height: 5px; border-radius: 50%; background: var(--muted); }
-.hero__title {
-  font-family: 'Newsreader', serif; font-weight: 400;
-  font-size: clamp(40px, 6vw, 82px); line-height: 1.02; letter-spacing: -1.5px; margin-bottom: 28px;
-}
-em.accent { font-style: italic; color: var(--accent); }
-.hero__lead { max-width: 30em; font-size: 18px; line-height: 1.65; color: var(--muted); margin-bottom: 36px; }
-.btn-row { display: flex; gap: 14px; flex-wrap: wrap; }
-.btn {
-  text-decoration: none; padding: 14px 26px; border-radius: 40px;
-  font-size: 14px; font-weight: 500; letter-spacing: .3px;
-}
-.btn--solid { background: var(--ink); color: var(--bg); transition: transform .2s ease; }
-.btn--solid:hover { transform: translateY(-2px); }
-.btn--ghost { border: 1px solid var(--line); color: var(--ink); transition: border-color .2s ease; }
-.btn--ghost:hover { border-color: var(--ink); }
-
-.portrait-wrap { justify-self: center; }
-.portrait {
-  position: relative; width: min(330px, 34vw); aspect-ratio: 4/5;
-}
-.portrait__frame {
-  position: absolute; inset: -14px -14px 14px 14px;
-  border: 1px solid var(--accent); border-radius: 6px; opacity: .5;
-}
-.portrait__img {
-  position: relative; z-index: 2; width: 100%; height: 100%;
-  object-fit: cover; border-radius: 6px; box-shadow: 0 30px 60px -30px rgba(0,0,0,.45);
-}
-/* Placeholder shown until you add images/portrait.jpg */
-.portrait__placeholder {
-  position: absolute; inset: 0; z-index: 1; border-radius: 6px;
-  background:
-    repeating-linear-gradient(45deg, var(--bg2), var(--bg2) 10px, var(--card) 10px, var(--card) 20px);
-  display: flex; align-items: center; justify-content: center; text-align: center;
-  font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted); padding: 20px;
-}
-
-/* ---------- MARQUEE STRIP ---------- */
-.strip {
-  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-  background: var(--bg2); padding: 18px 7vw;
-  display: flex; flex-wrap: wrap; gap: 36px;
-  font-family: 'JetBrains Mono', monospace; font-size: 12px;
-  letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted);
-}
-.strip .slash { color: var(--accent); }
-
-/* ---------- SECTION SHELLS ---------- */
-section { padding: 11vh 7vw; }
-.section-head { margin-bottom: 50px; }
-.section-title {
-  font-family: 'Newsreader', serif; font-weight: 400;
-  font-size: clamp(28px, 3.8vw, 46px); letter-spacing: -.8px; margin-top: 14px;
-}
-.alt-bg { background: var(--bg2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-
-/* ---------- ABOUT ---------- */
-.about { display: grid; grid-template-columns: .5fr 1fr; gap: 5vw; }
-.about__lead {
-  font-family: 'Newsreader', serif; font-size: clamp(22px, 2.6vw, 32px);
-  line-height: 1.4; letter-spacing: -.4px; margin-bottom: 30px;
-}
-.about__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 34px 5vw; max-width: 760px; }
-.about__cols p { font-size: 16px; line-height: 1.7; color: var(--muted); }
-.pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 38px; }
-.pill { border: 1px solid var(--line); border-radius: 40px; padding: 8px 16px; font-size: 13px; color: var(--ink); }
-
-/* ---------- WORK ---------- */
-.work-head {
-  display: flex; align-items: baseline; justify-content: space-between; gap: 20px;
-  border-bottom: 1px solid var(--line); padding-bottom: 22px; margin-bottom: 8px;
-}
-.work-head .note { font-size: 13px; color: var(--muted); }
-.work-item {
-  text-decoration: none; color: var(--ink);
-  display: grid; grid-template-columns: 48px 1fr auto; gap: 24px; align-items: center;
-  padding: 32px 14px; border-bottom: 1px solid var(--line);
-  transition: padding-left .25s ease, background .25s ease;
-}
-.work-item:hover { padding-left: 28px; background: var(--accent-soft); }
-.work-item__num { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--muted); }
-.work-item__top { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
-.work-item__title { font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(22px, 2.8vw, 30px); letter-spacing: -.4px; }
-.tag {
-  font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .5px; text-transform: uppercase;
-  color: var(--accent); border: 1px solid var(--accent); border-radius: 20px; padding: 3px 10px;
-}
-.work-item__desc { font-size: 15px; line-height: 1.6; color: var(--muted); max-width: 44em; }
-.arrow { font-size: 22px; color: var(--muted); }
-
-/* ---------- RESEARCH ---------- */
-.research-intro { max-width: 760px; margin-bottom: 46px; }
-.research-intro p { font-size: 17px; line-height: 1.7; color: var(--muted); margin-top: 18px; }
-.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.r-card {
-  border: 1px solid var(--line); border-radius: 12px; padding: 28px; background: var(--card);
-  display: flex; flex-direction: column; gap: 12px;
-}
-.r-card h3 { font-family: 'Newsreader', serif; font-weight: 500; font-size: 22px; letter-spacing: -.3px; }
-.r-card p { font-size: 14px; line-height: 1.65; color: var(--muted); }
-
-/* ---------- SKILLS ---------- */
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 36px 4vw; }
-.skill-group h4 {
-  font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase;
-  color: var(--muted); margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid var(--line);
-}
-.chips { display: flex; flex-wrap: wrap; gap: 9px; }
-.chip { font-size: 14px; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 7px; padding: 8px 13px; }
-
-/* ---------- TIMELINE ---------- */
-.timeline { max-width: 880px; }
-.tl-item { display: grid; grid-template-columns: 130px 1fr; gap: 30px; padding: 26px 0; border-top: 1px solid var(--line); }
-.tl-year { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent); padding-top: 4px; }
-.tl-role { font-family: 'Newsreader', serif; font-weight: 500; font-size: 22px; letter-spacing: -.3px; margin-bottom: 4px; }
-.tl-org { font-size: 14px; color: var(--muted); margin-bottom: 10px; }
-.tl-detail { font-size: 15px; line-height: 1.65; color: var(--muted); max-width: 46em; }
-
-/* ---------- WRITING ---------- */
-.posts { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 24px; }
-.post {
-  text-decoration: none; color: var(--ink); background: var(--card);
-  border: 1px solid var(--line); border-radius: 10px; padding: 30px;
-  display: flex; flex-direction: column; gap: 14px;
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-.post:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -24px rgba(0,0,0,.35); }
-.post__meta {
-  display: flex; justify-content: space-between; align-items: center;
-  font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .5px; text-transform: uppercase; color: var(--muted);
-}
-.post__title { font-family: 'Newsreader', serif; font-weight: 500; font-size: 23px; line-height: 1.25; letter-spacing: -.3px; }
-.post__excerpt { font-size: 14px; line-height: 1.6; color: var(--muted); }
-.post__more { margin-top: 6px; font-size: 13px; color: var(--accent); }
-
-/* ---------- CONTACT / FOOTER ---------- */
-.contact { padding: 13vh 7vw 8vh; }
-.contact__grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 6vw; align-items: end; }
-.contact__title {
-  font-family: 'Newsreader', serif; font-weight: 400;
-  font-size: clamp(34px, 5.5vw, 68px); line-height: 1.05; letter-spacing: -1.2px; margin: 18px 0 28px;
-}
-.contact__email {
-  text-decoration: none; font-family: 'Newsreader', serif; font-size: clamp(20px, 2.4vw, 28px);
-  color: var(--ink); border-bottom: 1px solid var(--accent); padding-bottom: 3px;
-}
-.links { display: flex; flex-direction: column; gap: 14px; }
-.link-row {
-  text-decoration: none; color: var(--ink);
-  display: flex; align-items: center; justify-content: space-between;
-  border: 1px solid var(--line); border-radius: 8px; padding: 15px 20px; font-size: 15px;
-  transition: background .2s ease, border-color .2s ease;
-}
-.link-row:hover { background: var(--accent-soft); border-color: var(--accent); }
-.link-row .ext { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted); }
-.colophon {
-  margin-top: 9vh; padding-top: 26px; border-top: 1px solid var(--line);
-  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
-  font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted);
-}
-
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 860px) {
-  .nav__links { gap: 16px; }
-  .nav__link { display: none; }            /* keep nav clean on mobile; brand + toggle remain */
-  .hero { grid-template-columns: 1fr; gap: 6vh; }
-  .portrait-wrap { justify-self: start; }
-  .about { grid-template-columns: 1fr; gap: 3vh; }
-  .about__cols { grid-template-columns: 1fr; }
-  .contact__grid { grid-template-columns: 1fr; gap: 6vh; align-items: start; }
-  .work-item { grid-template-columns: 32px 1fr; }
-  .work-item .arrow { display: none; }
-}
+<script src="js/main.js"></script>
+</body>
+</html>
